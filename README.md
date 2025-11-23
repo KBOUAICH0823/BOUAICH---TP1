@@ -1,5 +1,5 @@
 # BOUAICH---TP
-Exercice 1:
+Exercice 1
 Algorithme_Pin
     VAR code saisie , erreur :entier
     CONS code pin:entier
