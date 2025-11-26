@@ -63,7 +63,7 @@ Debut
    Lire (a,b)                                                        1
    ecrire(" le PGCD est:" ,PGCD(a,b))                                1
 Fin
-                                                               T(n)=2n+5=O(log(n))
+                                                               T(n)=2n+5=O(n)
 
 
            Exercice 5
@@ -100,9 +100,9 @@ Fin
 Algorithme_triangle_de_floyd
     VAR a,i,n:entier
      Procedure lignes(a:entier , n:entier)
-       Pour j de 1 a i faire.      
-          Ecrire a.          
-           a ← a + 1
+       Pour j de 1 a i faire.                                     3n+1    
+          Ecrire a.                                               n
+           a ← a + 1                                              2n
        Fin pour  
        ecrire("\n")
     Fin procedure
@@ -138,10 +138,10 @@ Fin                                                         T(n)= 2n+6 = O(n)
 ALGORITHME somme_des_entiers
  VAR nombre,somme:ENTIER
     Fonction sommeEntier (n:ENTIER): ENTIER
-       Si (n = 1 ) ,Alors
-         retourne  n.  
+       Si (n = 1 ) ,Alors                                             1
+         retourne  n.                                                 1
          Sinon
-         retourne  n + sommeEntier(n-1)      
+         retourne  n + sommeEntier(n-1)                               n
        Fin Si
     Fin Fonction
 
@@ -151,6 +151,6 @@ DEBUT
       lire(nombre)                                                    1
       somme ← sommeEntier(nombre)                                     1
       ecrire("La somme est:", somme)                                  1
-FIN                                                                 T(n)=
+FIN                                                                 T(n)=6(n)=O(n)
 
 
