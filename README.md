@@ -72,84 +72,85 @@ Algorithme_deviner_un_nombre
    Reponse:chaine
 Debut
    Repeter
-      Secret←aleaoire(1,100)
-      tentative←0
-      Tant que tentative<= 5 faire
-        ecrire("deviner un nombre:")
+      Secret ← aleatoire(1,100)
+      tentative ← 0
+      Tant que tentative< 5 faire
+         ecrire("deviner un nombre:")
          Lire x
-         tentative←tentative+1
-          Si x=secret alors
-               ecrire("felicitation")
-                retourne
-                Sinon
-                   Si x< secret alors
-                      ecrire("trop petit")
-                         Sinon
-                           ecrire ("trop grand")
-                    Fin si 
-             Fin si
-        Fin tant que
-     Si x # secret alors
+         tentative ← tentative+1
+           Si x=secret alors
+              ecrire("felicitation")
+             Sinon
+               Si x< secret ,alors
+                 ecrire("trop petit")
+                   Sinon
+                   ecrire ("trop grand")
+               Fin si 
+           Fin si
+      Fin tant que
+        Si x != secret, alors
            Ecrire("malheureusemet,le secret est:", secret)
-     Fin si
-      Ecrire("voulez vous rejouer? Oui ou nom")
-       Lire reponse
-    jusqu'a reponse =non
+        Fin si
+         Ecrire("voulez vous rejouer? Oui ou nom")
+         Lire reponse
+    jusqu'a (x=secret)ou( reponse =non)
 Fin
 
             Exercice 6
 Algorithme_triangle_de_floyd
-    VAR a,i,b:entier
-     Procedure lignes(a:entier , b:entier)
-       Pour j de 1 a b faire.      O(n)
+    VAR a,i,n:entier
+     Procedure lignes(a:entier , n:entier)
+       Pour j de 1 a i faire.      
           Ecrire a.          
-           a←a+1
-       Fin pour 
+           a ← a + 1
+       Fin pour  
+       ecrire("\n")
     Fin procedure
 Debut
-    ecrire("donner un nombre")   O(1)
-    Lire b.         O(1)
-     a←1.             O(1)
-     Pour i de 1 a b faire
-        Procedure lignes (a,b)   O(n)
-         a←a+i.          O(1)
+    ecrire("donner un nombre")  
+    Lire n        
+     a←1.             
+     Pour i de 1 a n faire
+        Procedure lignes (a,n)  
+         a←a+i.          
       Fin pour
 Fin
 
-Complexite= O(n²)
+
 
             Exercice 7 
-1}  Algorithme_somme_des_entiers
+1}  avec les boucles:
+Algorithme_somme_des_entiers
         Var n,s,i :entier
   Debut
-    ecrire("donner un nombre")   O(1)        lire n.   O(1)
-    somme ← 0.       O(1)
-         Pour i de 1 a n faire.     O(n)
-              s ← s+1.               O(n)
+    ecrire("donner un nombre")   
+    lire n.  
+    somme ← 0.       
+         Pour i de 1 a n faire.    
+              s ← s+1.               
          Fin pour
-           Ecrire("la somme est:"s)      O(1)
+           Ecrire("la somme est:"s)     
 Fin
 
-Complexite = O(n)
 
-2} ALGORITHME somme_des_entiers
-         VAR nombre,somme:ENTIER
-          Fonction sommeEntier (n:ENTIER): ENTIER
-            Si (n = 1 ) Alors.  O(1)
-                  retourne  n.   O(1)
-            Sinon
-                  retourne  n + sommeEntier(n-1)       O(1)
-            Fin Si
-      Fin Fonction
+
+2} avec les fonctions recursives:
+ALGORITHME somme_des_entiers
+ VAR nombre,somme:ENTIER
+    Fonction sommeEntier (n:ENTIER): ENTIER
+       Si (n = 1 ) ,Alors
+         retourne  n.  
+         Sinon
+         retourne  n + sommeEntier(n-1)      
+       Fin Si
+    Fin Fonction
 
 DEBUT
       
-      ecrire("Donner un nombre: ")   O(1)
-      lire(nombre)     O(1)
-      somme <-- sommeEntier(nombre)  O(n)
-      ecrire(" La somme est: ", somme) O(1)
+      ecrire("Donner un nombre: ")  
+      lire(nombre)    
+      somme ← sommeEntier(nombre)  
+      ecrire("La somme est:", somme) 
 FIN
 
-Complexite = O(n)
 
-Les complexites sont egaux
