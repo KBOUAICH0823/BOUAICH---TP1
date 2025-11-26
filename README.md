@@ -33,37 +33,37 @@ Debut
 Fin
 
             Exercice 3
-1}avec les boucles:
+1} avec les boucles:
 Algorithme_PGCD
     VAR a,b,reste:entier
-Debut
- ecrire("donner les valeurs de a et b") 
- Lire (a,b) 
-     Tant que b# 0 faire.  
-       reste←a mod b.  
-       a←b.      
-       b←reste.
+Debut                                                                  
+ ecrire("donner les valeurs de a et b")                             1
+ Lire (a,b)                                                         1
+     Tant que b!= 0 faire.                                          n
+       reste←a mod b.                                               1 
+       a←b.                                                         1
+       b←reste.                                                     1
      Fin tant que
-  ecrire("PGCD est:",a)   
+  ecrire("PGCD est:",PGCD)                                          1  
 Fin
-  
+                                                             T(n)= 6n =O(n)
 
 2} avec les fonctions recursives:
 Algorithme PGCD
     VAR a,b,reste: entier
     Fonction PGCD (a,b:entier):entier
-      Si b=0 alors.      
-          Retourne a.         
+      Si b=0 ,alors                                                  (1+1)*n= 2n                                                
+          Retourne a                                                 1
            Sinon
-           Retourne PGCD(b,a mod b)  
+           Retourne PGCD(b,a mod b)                                  1
       Fin si 
      Fin fonction
 Debut
-  ecrire("donner les valeurs de a et b")
-   Lire (a,b)         
-   ecrire(" le PGCD est:" ,PGCD(a,b))    
+  ecrire("donner les valeurs de a et b")                             1
+   Lire (a,b)                                                        1
+   ecrire(" le PGCD est:" ,PGCD(a,b))                                1
 Fin
-
+                                                               T(n)=2n+5=O(log(n))
 
 
            Exercice 5
@@ -107,14 +107,14 @@ Algorithme_triangle_de_floyd
        ecrire("\n")
     Fin procedure
 Debut
-    ecrire("donner un nombre")  
-    Lire n        
-     a←1.             
+    ecrire("donner un nombre")                                    1
+    Lire n                                                        1
+     a←1                                                          1             
      Pour i de 1 a n faire
         Procedure lignes (a,n)  
-         a←a+i.          
+         a←a+i                                                    1+1=2          
       Fin pour
-Fin
+Fin                                                            T(n)= O(n²)
 
 
 
@@ -123,14 +123,14 @@ Fin
 Algorithme_somme_des_entiers
         Var n,s,i :entier
   Debut
-    ecrire("donner un nombre")   
-    lire n.  
-    somme ← 0.       
-         Pour i de 1 a n faire.    
-              s ← s+1.               
+    ecrire("donner un nombre")                                     1
+    lire n.                                                        1
+    somme ← 0.                                                     1
+         Pour i de 1 a n faire.                                    2n
+              s ← s+1.                                             2          
          Fin pour
-           Ecrire("la somme est:"s)     
-Fin
+           Ecrire("la somme est:"s)                                1
+Fin                                                         T(n)= 2n+6 = O(n)
 
 
 
@@ -147,10 +147,10 @@ ALGORITHME somme_des_entiers
 
 DEBUT
       
-      ecrire("Donner un nombre: ")  
-      lire(nombre)    
-      somme ← sommeEntier(nombre)  
-      ecrire("La somme est:", somme) 
-FIN
+      ecrire("Donner un nombre: ")                                    1
+      lire(nombre)                                                    1
+      somme ← sommeEntier(nombre)                                     1
+      ecrire("La somme est:", somme)                                  1
+FIN                                                                 T(n)=
 
 
