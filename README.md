@@ -1,69 +1,70 @@
 # BOUAICH---TP
-Exercice 1
+      Exercice 1:
 Algorithme_Pin
     VAR code saisie , erreur :entier
     CONS code pin:entier
 Debut
-    Pour i de 1 a 3 faire
+    erreur<--0
+     repeter
        ecrire("saisie le code pin:")
        lire (pin_saisie)
-       Si code pin=code saisie alors
+        Si code pin= code saisie alors
           ecrire("operation fait avec succes")
-         sinon
+          sinon
           Erreur←erreur+1
           Ecrire("erreur")
+           Si erreur=3 alors
+             Ecrire ("carte SIM bloque")
+           Fin si
         Fin si
-     Fin pour
-   Si erreur=3 alors
-       Ecrire ("carte SIM bloque")
-    Fin si
-Fin
+      jusqu'a (code pin=code saisi)ou (erreur=3)
+ fin
 
-          Exercice 2
+          Exercice 2:
 Algorithme_l'echange
    Var a,b,c:entier
 Debut
   Ecrire("donner la valeur de a et b")
-   Lire (a,b)
-   c←a
-   a←b
+  Lire (a,b)
+    c←a
+    a←b
     b←c
-    ecrire("a=", a , "b=",b)
+   ecrire("a=", a , "b=",b)
 Fin
 
             Exercice 3
-1} Algorithme_PGCD
+1}avec les boucles:
+Algorithme_PGCD
     VAR a,b,reste:entier
 Debut
-   ecrire("donner les valeurs de a et b") O(1)
-    Lire (a,b) O(1)
-    Tant que b# 0 faire.  O(1)
-      reste←a mod b.  O(1)
-       a←b.      O(1)
-       b←reste.    O(1)
-    Fin tant que
-     ecrire("PGCD est:",a)    O(1)
+ ecrire("donner les valeurs de a et b") 
+ Lire (a,b) 
+     Tant que b# 0 faire.  
+       reste←a mod b.  
+       a←b.      
+       b←reste.
+     Fin tant que
+  ecrire("PGCD est:",a)   
 Fin
-  Complexite =O(log n)
+  
 
-2} Algorithme PGCD
+2} avec les fonctions recursives:
+Algorithme PGCD
     VAR a,b,reste: entier
     Fonction PGCD (a,b:entier):entier
-      Si b=0 alors.      O(1)
-          Retourne a.          O(1)
+      Si b=0 alors.      
+          Retourne a.         
            Sinon
-           Retourne PGCD(b,a mod b)  O(log n)
+           Retourne PGCD(b,a mod b)  
       Fin si 
      Fin fonction
 Debut
-  ecrire("donner les valeurs de a et b") O(1)
-   Lire (a,b)          O(1)
-   ecrire(" le PGCD est:" ,a)    O(1)
+  ecrire("donner les valeurs de a et b")
+   Lire (a,b)         
+   ecrire(" le PGCD est:" ,PGCD(a,b))    
 Fin
 
-Complexite = O (log n)
 
-Les complexite sont egaux
 
            Exercice 5
 Algorithme_deviner_un_nombre
